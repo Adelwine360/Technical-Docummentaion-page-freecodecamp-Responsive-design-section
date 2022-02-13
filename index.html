@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+
+<!---------  grid class to display sections side by side --------->
+<div class="grid">
+<!---------vertical navigation to different sections of the documentation page-->
+        <div class="nav-2">
+          <nav id="navbar" class="sub-nav">
+            <header class="main-header  bottom" >React documentation</header>
+            <ul>
+              <li><a class="nav-link"  href="#Introduction">introduction</a></li>
+              <li><a class="nav-link"  href="#Hello_World">Hello World</a></li>
+              <li><a class="nav-link"  href="#Introducing_JSX">introducing jsx</a></li>
+              <li><a class="nav-link"  href="#Rendering_elements">rendering elements</a></li>
+              <li><a class="nav-link"  href="#components_and_props">components and props</a></li>
+              <li><a class="nav-link"  href="#state_and_life_cycle">state and life cycle</a></li>
+              <li><a class="nav-link"  href="#handling_events">Handling events</a></li>
+              <li><a class="nav-link"  href="#conditional_rendering">conditional rendering</a></li>
+              <li><a class="nav-link"  href="#lists_and_keys">lists and keys</a></li>
+              <li><a class="nav-link"  href="#Forms">forms</a></li>
+              <li><a class="nav-link"  href="#lifting_state_up">lifting state up</a></li>
+              <li><a class="nav-link"  href="#Thinking_In_React">Thinking In React</a></li>
+              <li><a class="nav-link"  href="#Reference">Reference</a></li>
+            
+            
+            
+            </ul>
+          </nav>
+        </div>
+<!---------main section containing the main content of the documentation page-->
+    <main id="main-doc">
+      <!-------first section of the main documentation area-->
+      <section  class="main-section" id="Introduction">
+        <header class="main-header">Introduction</header>
+        <article>
+        <p>React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies</p>
+        <p>React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality</p>
+        <ul>
+          <li>
+            React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+
+    Declarative views make your code more predictable and easier to debug.
+          </li>
+
+          <li>
+            Build encapsulated components that manage their own state, then compose them to make complex UIs.
+
+    Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+          </li>
+        </ul>
+      </article>
+      </section>
+
+        <section  class="main-section" id="Hello_World">
+          <header class="main-header">Hello World</header>
+          <article>
+            <span><small>The smallest example looks like this</small></span>
+            <div class="code">
+              <code>
+                ReactDOM.render(
+                &lt;h1&gt;Hello, world! &lt;/h1&gt;
+                  document.getElementById('root')
+                );
+              </code>
+            </div>
+          <p>Click this link <em> <a href=""> Try it on CodePen </a></em> to open an online editor. Feel free to make some changes, and see how they affect the output. Most pages in this guide will have editable examples like this one.</p>
+          
+          <ul>
+            <li>
+              React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+
+              Declarative views make your code more predictable and easier to debug.
+            </li>
+
+            <li>
+              Build encapsulated components that manage their own state, then compose them to make complex UIs.
+
+              Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+
+      <section class="main-section" id="Introducing_JSX">
+        <header class="main-header">Introducing JSX</header>
+        <article>
+        <div class="code">
+          <code>
+            const element = &lt;h1&gt;Hello, world! &lt;/h1&gt;
+          </code>
+        </div>
+
+        <p>This funny tag syntax is neither a string nor HTML.
+          <br>
+
+          It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+          
+          JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.
+          
+          </p>
+
+          <span><small>Embedding Expressions in JSX</small></span>
+          <div class="code">
+            <code>
+            <div class="ligter-dark">const name = 'Josh Perez';
+              const element = &lt;h1&gt;Hello, {name} &lt;/h1&gt; </div> 
+              
+              ReactDOM.render(
+                element,
+                document.getElementById('root')
+              );
+            </code>
+          </div>
+          <p>
+            You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2, user.firstName, or formatName(user) are all valid JavaScript expressions.
+
+            In the example below, we embed the result of calling a JavaScript function, formatName(user), into an &lt;h1&gt; element.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Rendering_elements">
+        <header class="main-header">Rendering Elements</header>
+        <article>
+          <p>
+            Elements are the smallest building blocks of React apps.
+    An element describes what you want to see on the screen:
+    Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.
+          </p>
+          <div class="code">
+            <code>
+              const element = &lt;h1&gt; Hello, world&lt;/h1&gt; ;
+            </code>
+          </div>
+
+          <p class="code-backgroundYellow">
+            Note:
+          <br>    
+            One might confuse elements with a more widely known concept of “components”. We will introduce components in the next section. Elements are what components are “made of”, and we encourage you to read this section before jumping ahead.
+          </p>
+
+          <p>
+            We call this a “root” DOM node because everything inside it will be managed by React DOM.
+    Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.
+    To render a React element into a root DOM node, pass both to ReactDOM.render():
+          </p>
+          <div class="code">
+            <code>
+              const element =  &lt;h1&gt; Hello, world &lt;/h1&gt;
+    ReactDOM.render(element, document.getElementById('root'));
+            </code>
+          </div>
+
+
+        
+          <p>
+            React elements are immutable. Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.
+            <br>
+
+    With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().
+    <br>
+    Consider this ticking clock example:
+          </p>
+
+          <span><small>Updating the Rendered Element</small></span>
+          <div class="code">
+            <code>
+              function tick() { <br>
+                const element = (<br>
+                  &lt;div&gt;<br>
+                    &lt;h1&gt;Hello, world!&lt;/h1&gt;<br>
+                    &lt;h2&gt;It is {new Date().toLocaleTimeString()}.&lt;h2&gt;<br>
+                    &lt;/div&gt; <br>
+                ); <br>
+                ReactDOM.render(element, document.getElementById('root'));<br>
+              }
+              <br>
+              setInterval(tick, 1000);
+            </code>
+          </div>
+          
+        </article>
+      </section>
+
+      <section  class="main-section" id="components_and_props">
+    <header class="main-header">Components And Props</header>
+    <article>
+      <p>
+        Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed <a href=""> component API reference here.</a>
+    <br>
+    Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+      </p>
+
+      <span><small>Function and Class Components
+        <em> The simplest way to define a component is to write a JavaScript function: </em></small></span>
+          <div class="code">
+            <code>
+              function Welcome(props) {
+                <br>
+                return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;
+              }
+            </code>
+          </div>
+
+          <p>
+            This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.
+          </p>
+
+          <span><small>You can also use an ES6 class to define a component:</small></span>
+              <div class="code">
+                  <code>
+                    class Welcome extends React.Component { <br>
+                      render() { <br>
+                        return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt; <br>
+                      } <br>
+                    }
+                  </code>
+              </div>
+    </article>
+      </section>
+      <section  class="main-section" id="state_and_life_cycle">
+        <header class="main-header">State and Life cycle</header>
+        <article>
+          <p>This page introduces the concept of state and lifecycle in a React component. You can find a detailed component API reference here.
+    <br>
+            Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call ReactDOM.render() to change the rendered output:</p>
+
+
+        
+            <div class="code">
+              <code>
+                function tick() { <br>
+                  const element = ( <br>
+                    &lt;div&gt; <br>
+                      &lt;h1&gt;Hello, world!&lt;/h1&gt; <br>
+                      &lt;h2&gt;It is {new Date().toLocaleTimeString()}. &lt;/h2&gt; <br>
+                      &lt;/div&gt; <br>
+                  ); <br>  <div class="ligter-dark">
+                    ReactDOM.render( <br>
+                    element, <br>
+                    document.getElementById('root') <br>
+                  );   </div> 
+                  <br> 
+              
+                }
+                
+                setInterval(tick, 1000);
+              </code>
+            </div>
+        </article>
+      </section>
+
+      
+      
+      <section class="main-section" id="handling_events">
+        <header class="main-header">Handling Events</header>
+        <article>
+        <p>Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:</p>
+      
+        <ul>
+          <li>
+            React events are named using camelCase, rather than lowercase.
+          </li>
+
+          <li>
+            With JSX you pass a function as the event handler, rather than a string.
+          </li>
+        </ul>
+
+
+        <span><small>You can also use an ES6 class to define a component:</small></span>
+        <div class="code">
+          <code>
+            function Form() {
+              function handleSubmit(e) {
+                e.preventDefault();
+                console.log('You clicked submit.');
+              }
+            
+              return (
+                &lt;form onSubmit={handleSubmit}&gt;
+                &lt;button type="submit"&gt;Submit &lt;/button &gt;
+                &lt;/form &gt;
+              );
+            }
+          </code>
+        </div>
+      </article>
+
+      </section>
+      
+      <section class="main-section" id="conditional_rendering">
+        <header  class="main-header">Conditional Rendering</header>
+        <article>
+            <ul>
+              <li>In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.
+
+              </li>
+              <li>
+                Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.
+              </li>
+            </ul>
+
+            <span><small>We’ll create a Greeting component that displays either of these components depending on whether a user is logged in</small></span>
+        <div class="code">
+          <code>
+            function Greeting(props) { <br>
+              const isLoggedIn = props.isLoggedIn; <br>
+              
+              <div class="lighter-dark"> if (isLoggedIn) { <br>
+                return &lt;UserGreeting /&gt;<br>
+              } <br>
+              return &lt;GuestGreeting /&gt; <br>
+            }</div>
+        
+            <br>
+            ReactDOM.render( <br>
+              // Try changing to isLoggedIn={true}:br
+              <div class="lighter-dark">
+              &lt;Greeting isLoggedIn={false} /&gt;,<br>
+              document.getElementById('root') <br>
+            </div>
+            );
+          </code>
+        </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="lists_and_keys">
+        <header  class="main-header">Lists and Keys</header>
+        <article>
+          <span><small> Basic List Component</small></span>
+          <p>
+            Usually you would render lists inside a component.
+            We can refactor the previous example into a component that accepts an array of numbers and outputs a list of elements.
+          </p>
+
+          <p>
+            When you run this code, you’ll be given a warning that a key should be provided for list items. A “key” is a special string attribute you need to include when creating lists of elements. We’ll discuss why it’s important in the next section.
+            Let’s assign a key to our list items inside numbers.map() and fix the missing key issue.
+          </p>
+
+          <div class="code">
+            <code>
+        
+                function NumberList(props) { <br>
+                  const numbers = props.numbers; <br>
+                  const listItems = numbers.map((number) => <br>
+                  &lt;li&gt;{number}&lt;/li&gt; <br>
+                  );<br>
+              
+                return (<br>
+                
+                    &lt;ul&gt;{listItems}&lt;/ul&gt;
+                  
+                );<br>
+              }
+              <br>
+              const numbers = [1, 2, 3, 4, 5];<br>
+              ReactDOM.render( <br>
+              &lt;NumberList numbers={numbers} /&gt;,<br>
+                document.getElementById('root') <br>
+              );
+              
+            </code>
+          </div>
+          
+          <span><small> Keys</small></span>
+            <ul>
+              <li>Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:</li>
+
+
+              <div class="code">
+                <code>
+                  const numbers = [1, 2, 3, 4, 5];
+                  const listItems = numbers.map((number) =>
+                  &lt;li key={number.toString()} &gt;
+                      {number}
+                      &lt;/li &gt;
+                  );
+                  
+                </code>
+              </div>
+
+              <li>The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys:</li>
+            </ul>
+
+
+            <div class="code">
+              <code>
+                const todoItems = todos.map((todo) =>
+                &lt;li key={todo.id} &gt;
+        {todo.text}
+        &lt;/li &gt;
+    );
+              </code>
+            </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="Forms">
+    <header  class="main-header">Forms</header>
+    <article>
+    <span><small>Controlled Components</small></span>
+    <ul>
+      <li>
+        In HTML, form elements such as  &lt;input&gt;  &lt;textarea&gt;, and  &lt;select&gt;typically maintain their own state and update it based on user input. In React, mutable state is typically kept in the state property of components, and only updated with setState().
+
+      </li>
+      <li>
+        We can combine the two by making the React state be the “single source of truth”. Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”.
+        </li>
+      <li>
+        For example, if we want to make the previous example log the name when it is submitted, we can write the form as a controlled component:
+        </li>
+    </ul>
+      <div class="code">
+          <code>
+                class NameForm extends React.Component { <br>
+                  constructor(props) { <br>
+                    super(props);<br>
+                    this.state = {value: ''};<br>
+                
+                    this.handleChange = this.handleChange.bind(this);<br>
+                    this.handleSubmit = this.handleSubmit.bind(this);<br>
+                  }
+                  <br>
+                
+                  handleChange(event) { <br>
+                    this.setState({value: event.target.value}); <br>
+                  }
+                
+                  handleSubmit(event) {<br>
+                    alert('A name was submitted: ' + this.state.value); <br>
+                    event.preventDefault(); <br>
+                  }
+                  <br>
+                
+                  render() { <br>
+                    return ( <br>
+                      &lt;form onSubmit={this.handleSubmit}&gt; <br>
+                      &lt;label&gt; <br>
+                          Name: <br>
+                          &lt;input type="text" value={this.state.value} onChange={this.handleChange} /&gt; <br>
+                          &lt;/label&gt; <br>
+                          &lt;input type="submit" value="Submit" /&gt; <br>
+                        &lt;/form&gt; <br>
+                    ); <br>
+                  } <br>
+                }
+          </code>
+      </div>
+    </article>
+      </section>
+      <section class="main-section" id="lifting_state_up">
+      <header class="main-header">Lifting State Up</header>
+      <article>
+        <ul>
+          <li>Often, several components need to reflect the same changing data. We recommend lifting the shared state up to their closest common ancestor. Let’s see how this works in action. 
+
+          In this section, we will create a temperature calculator that calculates whether the water would boil at a given temperature.
+          
+          We will start with a component called BoilingVerdict. It accepts the celsius temperature as a prop, and prints whether it is enough to boil the water: </li>
+
+          <div class="code">
+            <code>
+              function BoilingVerdict(props) {
+                if (props.celsius >= 100) {
+                  return &lt;p&gt;The water would boil.&lt;/p&gt;;
+                }
+                return  &lt;p&gt;The water would not boil.&lt;/p&gt;
+              }
+            </code>
+          </div>
+            <li>
+              Next, we will create a component called Calculator. It renders an &lt;input&gt;that lets you enter the temperature, and keeps its value in this.state.temperature.
+
+    Additionally, it renders the BoilingVerdict for the current input value.
+            </li>
+        </ul>
+
+        <div class="code">
+          <code>
+            class Calculator extends React.Component {
+              constructor(props) {
+                super(props);
+                this.handleChange = this.handleChange.bind(this);
+                this.state = {temperature: ''};
+              }
+            
+              handleChange(e) {
+                this.setState({temperature: e.target.value});
+              }
+            
+              render() {
+                const temperature = this.state.temperature;<br>
+                return ( <br>
+                  &lt;fieldset&gt; <br>
+                  &lt;legend&gt;Enter temperature in Celsius:&lt;/legend&gt; <br>
+                  &lt;input <br>
+                      value={temperature} <br>
+                      onChange={this.handleChange} /&gt; <br>
+                      &lt;BoilingVerdict <br>
+                      celsius={parseFloat(temperature)} /&gt; <br>
+                      &lt;/fieldset&gt; <br>
+                );
+              }
+            }
+          </code>
+        </div>
+      </article>
+      </section>
+
+      <section class="main-section" id="Thinking_In_React">
+        <header class="main-header">Thinking In React</header>
+        <article>
+          <ul>
+            <li>React is, in our opinion, the premier way to build big, fast Web apps with JavaScript. It has scaled very well for us at Facebook and Instagram.</li>
+            <li>One of the many great parts of React is how it makes you think about apps as you build them. In this document, we’ll walk you through the thought process of building a searchable product data table using React.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header  class="main-header">Reference</header>
+        <article>
+        <p class="code-backgroundYellow">
+          Important Note!!:
+        <br>    
+        This page was developed for  learning purposes. IT IS NOT THE OFFICIAL <a href="https://reactjs.org/" target="_blank" > REACT DOCUMENTATION. </a>it contains the very basic concepts of react which are not indepth presentation of the   <a href="https://reactjs.org/" target="_blank "> react </a> ecosystem.
+        </p>
+        <ul>
+          <li>ALl the documentaion in this page was taken from <a href="https://reactjs.org/" target="_blank ">React</a></li>
+
+          <li> Please check <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" target="_blank">wikipedia.org</a> for additional information about the Javascript Library</li>
+        </ul>
+
+      </article>
+      </section>
+    </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

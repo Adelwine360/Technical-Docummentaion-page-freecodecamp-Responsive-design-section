@@ -1,0 +1,211 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+:root{
+  --codeColor:#f7f7f7;
+  --TextColor:#fff; 
+  --Tagcolor:#ff6347;
+  --color-text:#483D8B;
+  --codebackground:#000;
+  --specialNote:#f7eeab;
+  --specialColor:rgb(71, 69, 69);
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+/* style for the nav header and main section header*/
+.main-header{
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 25px;
+}
+
+.ligter-dark{
+  background-color: var(--specialColor);
+  border-radius: 13px;
+  padding: 20px;
+}
+
+
+
+small{
+  display: block;
+  align-items: center;
+  margin: auto;
+  padding-left: 180px;
+  font-size: 20px;
+  padding-bottom: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*grid container */
+.grid {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 4px ;
+  
+}
+/*  first contained a different header or the nav*/ 
+
+ .bottom{
+   margin: 10px;
+   border-bottom: 2px #000 solid;
+   padding: 3px;
+ }
+
+ 
+.sub-nav ul{
+  margin-left: 10px;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sub-nav ul li {
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.sub-nav ul li a{
+color: #000;
+word-spacing: 10px;
+
+
+}
+
+#navbar{
+  border-right: 2px #483D8B solid;
+  min-width: 290px;
+  position:inherit;
+ 
+}
+.nav-2 {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+
+}
+.nav-link{
+  border-bottom: 2px #000 solid;
+
+}
+
+#main-doc{
+color: #000;
+width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.code-backgroundYellow{
+  background:var(--specialNote);
+  align-items: center;
+  margin: auto;
+  margin: 20px;
+  padding: 30px;
+  display: block; 
+	font-size: 14px; 
+	line-height: 28px;
+	width: 100%;
+  border-left: 8px yellow solid;
+
+}
+.code-backgroundYellow p{
+  color: var(--TextColor);
+}
+
+
+.main-section article p{
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 25px;
+  color: #555;
+}
+
+.main-section article ul{
+  padding-left: 30px;
+}
+
+.main-section article ul li{
+  margin: 15px;
+  list-style-type:georgian;
+  font-size:16px ;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  color: #555;
+  
+}
+
+.code{
+  align-items: center;
+  margin: auto;
+  padding: 30px;
+  display: block; 
+	font-size: 14px; 
+	line-height: 28px;
+	width: 90%;
+	background-color: #333;
+	font-family: sans-serif;
+	color: var(--codeColor);
+	font-weight: bold;
+  border-radius: 13px;
+}
+
+
+
+
+@media (max-width:991px) {
+  .nav-2 {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    height: 100vh;
+    border-bottom: 2px solid;
+    border-left: none;
+   
+  }
+ #main-doc{
+   padding-top: 220px;
+   display: inline-block;
+   width: 100%;
+ }
+ #main-doc header{
+  position: initial;
+ 
+ }
+ .grid {
+   display: inline-block;
+   padding-bottom: 0;
+ }
+ #navbar{
+   border-right: none;
+ }
+
+ .main-section article p{
+  display: block;
+ }
+
+ small{
+  display: block;
+  padding: 3px;
+ }
+
+ #navbar header{
+  padding-top: 30px;
+}
+
+}
